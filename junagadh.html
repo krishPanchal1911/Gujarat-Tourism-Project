@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmedabad - Gujarat Tourism</title>
+    
+    <!-- 🔹 Internal CSS -->
+    <style>
+        /* 🔹 General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* 🔹 Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 🔹 Banner Section */
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            filter: brightness(70%);
+            transform: scale(1.1);
+            transition: transform 3s ease-in-out;
+        }
+
+        .banner h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 36px;
+            font-weight: bold;
+            animation: fadeInText 2s ease-in-out;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 🔹 Custom Buttons */
+        .btn-custom {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #ff6600, #e05500);
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(45deg, #e05500, #c04000);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 🔹 Content Sections */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #ff6600;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* 🔹 Map Section */
+        .map-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        iframe {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 🔹 Footer */
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+       
+        /* 🔹 Gallery Layout */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* 🔹 Individual Gallery Item */
+        .gallery-item {
+            position: relative;
+            width: 30%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* 🔹 Hover Effect for Text */
+        .gallery-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover .gallery-text {
+            opacity: 1;
+        }
+        .hotel-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hotel {
+            position: relative;
+            width: 30%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hotel img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hotel:hover img {
+            transform: scale(1.1);
+        }
+
+        .hotel-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hotel:hover .hotel-name {
+            opacity: 1;
+        }
+
+        /* 🔹 Responsive Design */
+        @media (max-width: 768px) {
+            .banner h1 {
+                font-size: 28px;
+                padding: 10px 15px;
+            }
+
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery-item {
+                width: 90%;
+            }
+
+            iframe {
+                height: 300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 🔹 Banner Section -->
+    <div class="banner">
+        <img src="Images/Junagadh_files/Mahabat-Maqbara-.jpg" alt="Ahmedabad">
+        <h1>Junagadh - The City of History & Heritage</h1>
+    </div>
+
+    <!-- 🔹 Navigation -->
+    <nav>
+        <a href="gp1.html" class="btn-custom">← Back to Home</a>
+    </nav>
+
+    <!-- 🔹 About Section -->
+    <section class="fade-in">
+        <h2>About Junagadh</h2>
+        <p>
+            Junagadh is an ancient city in Gujarat, known for its rich history, cultural heritage, and stunning architecture.  
+            The city is home to Uparkot Fort, Mahabat Maqbara, and the Girnar Hills.
+        </p>
+        <p>
+            The Girnar Hills, located near Junagadh, hold religious significance and house several ancient Hindu and Jain temples.  
+            The annual Girnar Parikrama festival attracts thousands of pilgrims.
+        </p>
+        <p>
+            Junagadh is also the gateway to Gir National Park, which is famous for being the last refuge of the Asiatic Lions.
+        </p>
+    </section>
+    
+    <section>
+        <h2>Near By attractions</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Images/Sasan-Gir-Thumbnail1.png" alt="Sabarmati Ashram">
+                <div class="gallery-text">Gir National Forest</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Images/Girnar-Hill,-Pilgrimage-Centre-Banner.jpg" alt="Adalaj Stepwell">
+                <div class="gallery-text">Girnar</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Images/junagadh.jpg" alt="Kankaria Lake">
+                <div class="gallery-text">Mahabat khan maqbara</div>
+            </div>
+        </div>
+    </section>
+    <section class="fade-in">
+        <h2>Hotels in Junagadh</h2>
+        <div class="hotel-gallery">
+            <div class="hotel">
+                <img src="Images/hotel-01.jpg" alt="Hotel Bellevue">
+                <div class="hotel-name">Hotel Bellevue</div>
+            </div>
+            <div class="hotel">
+                <img src="Images/hotel-02.jpg" alt="Hotel Harmony">
+                <div class="hotel-name">Hotel Harmony</div>
+            </div>
+            <div class="hotel">
+                <img src="Images/hotel-03.jpg" alt="Hotel Platinum">
+                <div class="hotel-name">Hotel Platinum</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔹 Map Section -->
+    <section class="fade-in">
+        <h2>Find Girnar on the Map</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59382.63236441544!2d70.39640998533474!3d21.530641036874727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958018c6a277f53%3A0x13b52f8520a86e48!2sJunagadh%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1739707124312!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <p>&copy; 2025 Gujarat Tourism. All Rights Reserved.</p>
+        <p>Designed with ❤️ by <a href="#">Your Name</a></p>
+    </footer>
+
+    <!-- 🔹 JavaScript for Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Smooth fade-in effect for sections
+            const fadeElements = document.querySelectorAll(".fade-in");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+</body>
+</html>

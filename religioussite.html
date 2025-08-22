@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>religious site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Banner Section */
+        .head {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .banner {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+        .bannerinfo {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            color: white;
+        }
+        .banner-text {
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        /* Text Container */
+        .textcontainer {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .textcontainer b {
+            font-size: 20px;
+        }
+        .textcontainer p {
+            font-size: 16px;
+            line-height: 22px;
+            text-align: justify;
+        }
+
+        /* Image Styling */
+        .placeimg {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .img-banner {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .img-banner:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .thali-banner {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+        .placeimg span {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: bottom 0.3s ease;
+        }
+        .placeimg:hover span {
+            bottom: 20px;
+        }
+
+        /* Grid Spacing */
+        .row.g-4 {
+            row-gap: 20px;
+        }
+    </style>
+</head>
+<body> 
+
+    <!-- Banner Section -->
+    <div class="head">
+        <img src="Images/religioussite/Dwarkadhish-banner.jpg" alt="" class="banner">
+        <div class="bannerinfo">
+            <h1 class="banner-text">Religious site</h1>
+        </div>
+    </div>
+
+    <!-- About Cuisine -->
+    <div class="textcontainer">
+        <p><b>Religious Sites</b></p>
+        <p>
+            The whole state of Gujarat is highly opulent with godly places of pilgrimage and holy temples Ambaji, Somnath, Dwarka, Palitana, Girnar, and Dakor are the chief holy places of Gujarat. Out of 51 "Aady Shakti Pith" the foremost "Aady Shakti Pith" of Ambaji, out of the 12 jyotirlings, the foremost jyotirling of Somnath, out of the "Sat puri", the foremost "Dwarka Puri", one of the "char dham", "Dwarka dham", the world renown biggest hindu temple, "Palitana" as well as Dakor, Girnar, and other religious places are situated in the state of Gujarat.
+        </p>
+    <!-- Food Items Grid -->
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="placeimg">
+                    <img src="Images/religioussite/Ambaji-Temple-Thumbnail.jpg" alt="" class="img-banner">
+                    <span>Ambaji</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="placeimg">
+                    <img src="Images/religioussite/Akshardham-Temple-Thumbnail.jpg" alt="" class="img-banner">
+                    <span>Akshardham</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="placeimg">
+                    <img src="Images/religioussite/Dwarkadhish-Temple-Thumbnail.jpg" alt="" class="img-banner">
+                    <span>Dwarka</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="placeimg">
+                    <img src="Images/religioussite/Hutheesing-Jain-Temple-Thumbnail.jpg" alt="" class="img-banner">
+                    <span>Hutseing jain temple</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="placeimg">
+                    <img src="Images/religioussite/Palitana-And-Shatrunjaya-Hill-Thumbnail.jpg" alt="" class="img-banner">
+                    <span>Palitana</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="placeimg">
+                    <img src="Images/religioussite/Somnath-Temple-Thumbnail.jpg" alt="" class="img-banner">
+                    <span>Somnath</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    

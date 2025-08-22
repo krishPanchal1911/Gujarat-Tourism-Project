@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujarat Cuisines</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="c1.css">
+
+    <style>
+        /* Banner Section */
+        .head {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .banner {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+        .bannerinfo {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            color: white;
+        }
+        .banner-text {
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        /* Text Container */
+        .textcontainer {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .textcontainer b {
+            font-size: 20px;
+        }
+        .textcontainer p {
+            font-size: 16px;
+            line-height: 22px;
+            text-align: justify;
+        }
+
+        /* Image Styling */
+        .foodimg {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .img-banner {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .img-banner:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .thali-banner {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+        .foodimg span {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: bottom 0.3s ease;
+        }
+        .foodimg:hover span {
+            bottom: 20px;
+        }
+
+        /* Grid Spacing */
+        .row.g-4 {
+            row-gap: 20px;
+        }
+    </style>
+</head>
+<body> 
+
+    <!-- Banner Section -->
+    <div class="head">
+        <img src="Images/Carousel/cuisine-banner1.jpeg" alt="cuisine" class="banner">
+        <div class="bannerinfo">
+            <h1 class="banner-text">Gujarat Cuisines</h1>
+        </div>
+    </div>
+
+    <!-- About Cuisine -->
+    <div class="textcontainer">
+        <p><b>Cuisine</b></p>
+        <p>
+            “
+            <i>Surat Nu Jaman Ane Kashi Nu Maran</i>
+            ”a popular saying in Gujarati which means dining at Surat and dying at Varanasi, is the way to heaven. One of the thrills of traveling to Gujarat is its multi cuisine. Perhaps the best way to know a state is to cut to the heart of the extraordinary culture of Gujarat is by exploring its cuisine.
+        </p>
+        <p>
+            The people of Gujarat have perfected the art of vegetarian cooking and their cuisine is a delectable and mouth watering. To taste the excellent vegetarian Gujarati cuisine, is to have a Thali Meal – the ultimate delightful vegetarian fare. The traditional Gujarati Thali is one of the best ways to know the Gujarati Cuisine. Saurashtra’s typical seasonings – mustard seed, turmeric, pounded red chillies, cumin and coriander – which flavour Gujarat’s distinctive vegetarian cuisine. 
+        </p>
+        <p>
+            There are also seasonal specialties - Aamraas (Mango Pool) is commonly served in summer while Undhiyu which has roast vegetables and Muthias (veg kebabs) is characteristically had in January.
+        </p>
+        <p>
+            Besides vegetarian dishes, the Muslim community, the tribal groups like Bohras and Khojas offers special non-vegetarian cuisine. And also Saurashtra’s garlic spice mixture - a combination of garlic, red chillies and salt pounded together, which adds extra peps to lot of Gujarati foods. Many Gujarati dishes are distinctively sweet, salty and spicy at the same time.
+        </p>
+        <p>
+            <b>
+                Gujarati Thali
+            </b>
+        </p>
+        <p>
+            A Gujarati thali typically comprises of  one or two steamed or fried snacks called farsans, a green vegetable, a tuber or a gourd shaak (shaaks are main courses with vegetables and spices mixed together into a curry or a spicy dry dish), a kathol (braised pulses like beans, chickpea or dry peas), one or more yogurt dishes like dahi, kadhi (yogurt and pulses soup), raita or sweet shrikhand, rice or khichdi, daal usually toor dal, and sweets like halwas, basundi or shrikhand. Accompaniments include sweet, sour and spicy chutneys, pickles, ghee and a salad of chopped vegetables served raw or may be steamed in spices.  Much detailing goes into creating a balance of tastes and textures - you could have coarse, grainy, granular, smooth, uniform, dry and wet dishes on the same platter, the sweetness, bitterness, sourness and heat of each main course would vary between dishes, and the thali has more colours than a rainbow – the yellow of turmeric, the whiteness of dairy products, the redness of tomatos, the green of leafy vegetables, the brown of pulses, and the colours of various spices, relishes and salad vegetables, are harmoniously part of a single thali. 
+        </p>
+        <p>
+            The breads eaten with a thali would include thick and coarse bajra rotla, thin unleavened wheat rotlis, thick and crisp whole wheat flour rotis called bakhris, parathas, savoury griddle bread called the thepla, deep-fried puris, among others. There are many variations like methi thepla or masala puri within these breads. As Gujaratis are globe-trotters, with a large Gujarati Diaspora overseas and around India as well as being great travellers on holiday or pilgrimage around the world, there are many Gujarati  farsans, snacks and mini-meals that are designed to travel and keep well – for instance khakras are crisp wafer-like rotis made from wheat, cornflour or lentils that can be carried and eaten with vegetables or accompaniments or dhebras made from a mix of flours can travel better than rotlis. 
+        </p>
+    </div>
+
+    <!-- Thali Image -->
+    <div class="textcontainer text-center">
+        <div class="foodimg">
+            <img src="Images/Cuisines/thali-banner.jpg" alt="Gujarati Thali" class="thali-banner">
+            <span>Gujarati Thali</span>
+        </div>
+    </div>
+
+    <div class="textcontainer">
+        <p><b>Farsan</b></p>
+        <p>Intrinsic to a traditional Gujarati meal, dal, shaak and kathol hold the promise of a bounty of flavours, aromas and a unique eating experience. The balance of colours and textures of the main course is richly enhanced by the side portions of the pickle and salad and some spiced buttermilk
+        </p>
+    </div>
+
+    <!-- Food Items Grid -->
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="foodimg">
+                    <img src="Images/Cuisines/Khandvi.jpg" alt="Khandvi" class="img-banner">
+                    <span>Khandvi</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="foodimg">
+                    <img src="Images/Cuisines/Handhwo (2).png" alt="Handvo" class="img-banner">
+                    <span>Handvo</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="foodimg">
+                    <img src="Images/Cuisines/Khaman (1).png" alt="Khaman" class="img-banner">
+                    <span>Khaman</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="foodimg">
+                    <img src="Images/Cuisines/khakhra1.jpg" alt="Khakhra" class="img-banner">
+                    <span>Khakhra</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="textcontainer">
+        <p><b>Dal, Shak & Kathol</b></p>
+        <p>Intrinsic to a traditional Gujarati meal, dal, shaak and kathol holds the promise of a bounty of flavours, aromas and a unique eating experience. The balance of colours and textures of the main course is richly enhanced by the side portions of the pickle and salad and some spiced buttermilk
+        </p>
+    </div>
+
+    <!-- More Food Items -->
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="foodimg">
+                    <img src="Images/Cuisines/dal-banner.jpg" alt="Gujarati Dal" class="img-banner">
+                    <span>Gujarati Dal</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="foodimg">
+                    <img src="Images/Cuisines/undhiyu-min.jpg" alt="Undhiyu" class="img-banner">
+                    <span>Undhiyu</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="textcontainer">
+        <p><b>Mishthaan</b></p>
+        <p>Rather than wait impatiently for its arrival as the last course, the Gujarati palate has long become accustomed to savouring the delights of mishthaan or dessert as an integral part of its main meal on the thali. So, be it the light-as-air Shrikhand or summer favourite Keri no Ras… there’s no deserting the Gujarati mishthaan anytime soon
+        </p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="foodimg">
+                    <img src="Images/Cuisines/Basundi (1).png" alt="Basundi" class="img-banner">
+                    <span>Basundi</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="foodimg">
+                    <img src="Images/Cuisines/shrikhand2-min.jpg" alt="Shrikhand" class="img-banner">
+                    <span>Shrikhand</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
